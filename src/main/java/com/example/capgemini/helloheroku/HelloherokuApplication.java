@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @SpringBootApplication
+@RequestMapping("/")
 public class HelloherokuApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HelloherokuApplication.class, args);
 	}
 
-	@RequestMapping("/")
+	@RequestMapping("/hi")
 	@ResponseBody
 	String helloWorld() {
 		return "Hello World!";
